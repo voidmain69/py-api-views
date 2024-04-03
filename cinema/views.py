@@ -98,7 +98,7 @@ class ActorDetail(
         return self.partial_update(request, *args, **kwargs)
 
 
-class CinemaHallList(
+class CinemaHallViewSet(
     mixins.ListModelMixin,
     mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,

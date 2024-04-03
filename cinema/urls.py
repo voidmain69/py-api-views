@@ -7,7 +7,7 @@ from cinema.views import (
     GenreDetail,
     ActorList,
     ActorDetail,
-    CinemaHallList,
+    CinemaHallViewSet,
 )
 
 actions_list = {
@@ -22,8 +22,8 @@ actions_detail = {
     "delete": "destroy",
 }
 
-cinema_halls_list = CinemaHallList.as_view(actions=actions_list)
-cinema_halls_detail = CinemaHallList.as_view(actions=actions_detail)
+cinema_halls_list = CinemaHallViewSet.as_view(actions=actions_list)
+cinema_halls_detail = CinemaHallViewSet.as_view(actions=actions_detail)
 
 router = routers.DefaultRouter()
 router.register("movies", MovieViewSet)
