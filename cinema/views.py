@@ -106,5 +106,5 @@ class CinemaHallViewSet(
     mixins.DestroyModelMixin,
     viewsets.GenericViewSet,
 ):
-    queryset = CinemaHall.objects.prefetch_related("actors", "genres")
+    queryset = CinemaHall.objects.all()
     serializer_class = CinemaHallSerializer
